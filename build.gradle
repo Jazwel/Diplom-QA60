@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group = 'ru.netology.diplomaprogect'
+group = 'ru.netology.stats'
 version = '1.0-SNAPSHOT'
 
 repositories {
@@ -16,4 +16,5 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    systemProperty 'db.url', System.getProperty('db.url')
 }
