@@ -1,6 +1,6 @@
-#Дипломная работа профессии «Тестировщик ПО»
+#  _Дипломная работа профессии «Тестировщик ПО»_
 
-##Автоматизация тестирования веб-сервиса для покупки тура
+## _Автоматизация тестирования веб-сервиса для покупки тура_
 
 ### _Описание приложения_
 
@@ -14,7 +14,7 @@
 3. Установить и запустить DBeaver;
 4. Сделать `git clone` репозитория с Github [по ссылке](https://github.com/Jazwel/Diplom-QA60));
 5. Открыть проект в IntelliJ IDEA;
-6. Настроить БД MySql и PoStgreSql в приложении DBeaver.
+7. Настроить БД MySql и PoStgreSql в приложении DBeaver.
 
 
 ## Запуск тестового приложения
@@ -22,7 +22,7 @@
     ```
    docker-compose up --build
    ```
-- Запустить приложение для двух ДБ:
+- Запустить приложение для:
 * MySQL:
     ```
    java -Dspring.datasource.url=jdbc:mysql://localhost:3306/app -jar artifacts/aqa-shop.jar
@@ -31,18 +31,18 @@
    ```
    java -Dspring.datasource.url=jdbc:postgresql://localhost:5432/app -jar artifacts/aqa-shop.jar
    ```
-- Проверить, что ссылка открывается и приложение доступно по адресу:
+- Открыть приложение по адресу:
    ```
    http://localhost:8080/
    ```
 
 ## Запуск тестов
 
-- Для MySQL:
+- MySQL:
    ```
    ./gradlew clean test "-Ddb.url=jdbc:mysql://localhost:3306/app"
    ```
-- Для PostgreSQL:
+- PostgreSQL:
    ```
    ./gradlew clean test "-Ddb.url=jdbc:postgresql://localhost:5432/app"
    ```
@@ -59,3 +59,10 @@
    ```
 Для просмотра отчета Gradle: 
  Пройти путь: `C:\...\DiplomQA60\build\reports\tests\test\index.html`
+## Завершение работы приложения
+- Завершение работы приложения:
+   ```
+   Ctrl+C
+- Остановка работы контейнеров:
+   ```
+   docker-compose down
