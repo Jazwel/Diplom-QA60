@@ -2,11 +2,14 @@ package data;
 
 import com.github.javafaker.Faker;
 
+
 import java.time.LocalDate;
 import java.util.Locale;
 import java.util.Random;
 
 import java.time.format.DateTimeFormatter;
+
+
 
 
 public class Datahelper {
@@ -35,6 +38,10 @@ public class Datahelper {
         LocalDate currentData = LocalDate.now();
         return currentData.format(DateTimeFormatter.ofPattern("MM"));
     }
+    public static String getIncorrectMonth() {
+        return "15";
+    }
+
 
     public static String getLocalYear() {
         LocalDate currentDate = LocalDate.now();
@@ -73,9 +80,13 @@ public class Datahelper {
         return faker.name().lastName();
     }
 
-    public static String getUserInCyrillic() {
+    public static String getUserNameInCyrillic() {
         Faker faker = new Faker(new Locale("ru"));
-        return faker.name().firstName() + faker.name().lastName();
+        return faker.name().firstName();
+    }
+    public static String getUserLastNameInCyrillic() {
+        Faker faker = new Faker(new Locale("ru"));
+        return faker.name().lastName();
     }
 
     public static String getEmptyCardNumber() {

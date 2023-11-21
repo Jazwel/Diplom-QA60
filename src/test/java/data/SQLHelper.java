@@ -6,6 +6,7 @@ import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 
 public class SQLHelper {
@@ -42,12 +43,15 @@ public class SQLHelper {
         return getData(codesSQL);
     }
 
-    @SneakyThrows
     public static long getOrderCount() {
-        String codesSQL = "SELECT COUNT(*) FROM order_entity;";
+        String countSQL = "SELECT COUNT(*) FROM order_entity;";
         try (Connection conn = DriverManager.getConnection(url, user, password)) {
             QueryRunner runner = new QueryRunner();
-            return runner.query(conn, codesSQL, new ScalarHandler<>());
+            Long count = runner.query(conn, countSQL, new ScalarHandler<>());
+            return count != null ? count : 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return 0;
         }
     }
     @SneakyThrows
@@ -59,5 +63,6 @@ public class SQLHelper {
         }
         return data;
     }
+    }
 
-}
+

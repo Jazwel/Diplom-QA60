@@ -7,8 +7,6 @@ import com.codeborne.selenide.conditions.Text;
 import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class TourPage {
@@ -24,9 +22,11 @@ public class TourPage {
     private SelenideElement statusApproved = $$(".notification__title").find(exactText("Успешно"));
     private SelenideElement statusDenied = $$(".notification__content").find(exactText("Ошибка! Банк отказал в проведении операции."));
     private SelenideElement incorrectFormat = $$("span.input__sub").find(exactText("Неверный формат"));
-    private SelenideElement cardYearExpired = $$("span.input__sub").find(exactText("Истёк срок действия карты"));
-    private SelenideElement cardNameEmpty = $$(".input__inner span.input__sub").find(exactText("Поле обязательно для заполнения"));;
+    private SelenideElement cardExpired = $$("span.input__sub").find(exactText("Истёк срок действия карты"));
+    private SelenideElement surelySigned = $$(".input__inner span.input__sub").find(exactText("Поле обязательно для заполнения"));
+    ;
     private SelenideElement cardYear2 = $$("span.input__sub").find(exactText("Неверно указан срок действия карты"));
+    private SelenideElement invalidMonth = $$("span.input__sub").find(exactText("Неверно указан срок действия карты"));
 
 
     public void debitCard() {
@@ -39,23 +39,23 @@ public class TourPage {
         buttonCreditPurchase.click();
     }
 
-    public void setCardNumber(String number) {
+    public void cardNumber(String number) {
         cardNumber.setValue(number);
     }
 
-    public void setCardMonth(String month) {
+    public void cardMonth(String month) {
         cardMonth.setValue(month);
     }
 
-    public void setCardYear(String year) {
+    public void cardYear(String year) {
         cardYear.setValue(year);
     }
 
-    public void setCardOwner(String owner) {
+    public void cardOwner(String owner) {
         cardOwner.setValue(owner);
     }
 
-    public void setCardCVV(String cvv) {
+    public void cardCVV(String cvv) {
         cardCVV.setValue(cvv);
     }
 
@@ -75,18 +75,23 @@ public class TourPage {
         incorrectFormat.shouldBe(visible);
     }
 
-    public void cardYearExpired() {
-        cardYearExpired.shouldBe(visible);
+    public void cardExpired() {
+        cardExpired.shouldBe(visible);
     }
 
-    public void cardNameEmpty() {
-        cardNameEmpty.shouldBe(visible);
+    public void surelySigned() {
+        surelySigned.shouldBe(visible);
+    }
+    public void invalidMonth (){invalidMonth.shouldBe(visible);
     }
 
     public void cardYear2() {
         cardYear2.shouldBe(visible);
     }
-}
+
+    }
+
+
 
 
 
