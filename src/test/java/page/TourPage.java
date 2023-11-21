@@ -82,14 +82,16 @@ public class TourPage {
     public void surelySigned() {
         surelySigned.shouldBe(visible);
     }
-    public void invalidMonth (){invalidMonth.shouldBe(visible);
+
+    public void invalidMonth() {
+        invalidMonth.shouldBe(visible);
     }
 
     public void cardYear2() {
         cardYear2.shouldBe(visible);
     }
 
-    }
+}
 
 
 

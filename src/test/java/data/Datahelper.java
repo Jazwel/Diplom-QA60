@@ -10,14 +10,12 @@ import java.util.Random;
 import java.time.format.DateTimeFormatter;
 
 
-
-
 public class Datahelper {
 
     private static final Faker faker = new Faker(new Locale("en"));
     private static final Random random = new Random();
 
-     private Datahelper() {
+    private Datahelper() {
 
     }
 
@@ -26,7 +24,7 @@ public class Datahelper {
     }
 
     public static String getValidCard2() {
-        return "44444444444442";
+        return "4444 4444 4444 4442";
 
     }
 
@@ -38,6 +36,7 @@ public class Datahelper {
         LocalDate currentData = LocalDate.now();
         return currentData.format(DateTimeFormatter.ofPattern("MM"));
     }
+
     public static String getIncorrectMonth() {
         return "15";
     }
@@ -84,6 +83,7 @@ public class Datahelper {
         Faker faker = new Faker(new Locale("ru"));
         return faker.name().firstName();
     }
+
     public static String getUserLastNameInCyrillic() {
         Faker faker = new Faker(new Locale("ru"));
         return faker.name().lastName();

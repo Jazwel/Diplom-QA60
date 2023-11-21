@@ -31,7 +31,8 @@ dependencies {
     testImplementation 'io.qameta.allure:allure-selenide:2.20.1'
     testImplementation 'mysql:mysql-connector-java:8.0.30'
     testImplementation 'commons-dbutils:commons-dbutils:1.7'
-    testImplementation 'org.postgresql:postgresql:42.2.18'}
+    testImplementation 'org.postgresql:postgresql:42.2.18'
+}
 
 test {
     useJUnitPlatform()

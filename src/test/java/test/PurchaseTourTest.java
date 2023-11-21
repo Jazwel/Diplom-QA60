@@ -100,6 +100,7 @@ public class PurchaseTourTest {
         tourpage.incorrectFormat();
         assertEquals(0, getOrderCount());
     }
+
     @Test
     public void shouldUseIncorrectMonth() {
         tourpage.debitCard();
@@ -125,6 +126,7 @@ public class PurchaseTourTest {
         tourpage.cardExpired();
         assertEquals(0, getOrderCount());
     }
+
     @Test
     public void shouldUseFutureYear() {
         tourpage.debitCard();
@@ -136,7 +138,8 @@ public class PurchaseTourTest {
         tourpage.clickButtonContinue();
         tourpage.cardYear2();
         assertEquals(0, getOrderCount());
-}
+    }
+
     @Test
     public void shouldUseIncorrectCvv() {
         tourpage.debitCard();
@@ -149,6 +152,7 @@ public class PurchaseTourTest {
         tourpage.incorrectFormat();
         assertEquals(0, getOrderCount());
     }
+
     @Test
     public void shouldUseOnlyName() {
         tourpage.debitCard();
@@ -161,6 +165,7 @@ public class PurchaseTourTest {
         tourpage.surelySigned();
         assertEquals(0, getOrderCount());
     }
+
     @Test
     public void shouldUseOnlyLastName() {
         tourpage.debitCard();
@@ -173,6 +178,7 @@ public class PurchaseTourTest {
         tourpage.surelySigned();
         assertEquals(0, getOrderCount());
     }
+
     @Test
     public void shouldUseNameInCyrillic() {
         tourpage.debitCard();
@@ -185,6 +191,7 @@ public class PurchaseTourTest {
         tourpage.surelySigned();
         assertEquals(0, getOrderCount());
     }
+
     @Test
     public void shouldUseLastNameInCyrillic() {
         tourpage.debitCard();
@@ -197,6 +204,7 @@ public class PurchaseTourTest {
         tourpage.surelySigned();
         assertEquals(0, getOrderCount());
     }
+
     @Test
     public void shouldUseEmptyCard() {
         tourpage.debitCard();
@@ -209,6 +217,7 @@ public class PurchaseTourTest {
         tourpage.incorrectFormat();
         assertEquals(0, getOrderCount());
     }
+
     @Test
     public void shouldUseEmptyMonth() {
         tourpage.debitCard();
@@ -221,6 +230,7 @@ public class PurchaseTourTest {
         tourpage.incorrectFormat();
         assertEquals(0, getOrderCount());
     }
+
     @Test
     public void shouldUseEmptyYear() {
         tourpage.debitCard();
@@ -233,6 +243,7 @@ public class PurchaseTourTest {
         tourpage.incorrectFormat();
         assertEquals(0, getOrderCount());
     }
+
     @Test
     public void shouldUseEmptyOwner() {
         tourpage.debitCard();
@@ -245,6 +256,7 @@ public class PurchaseTourTest {
         tourpage.surelySigned();
         assertEquals(0, getOrderCount());
     }
+
     @Test
     public void shouldUseEmptyCvv() {
         tourpage.debitCard();
@@ -270,6 +282,7 @@ public class PurchaseTourTest {
         tourpage.incorrectFormat();
         assertEquals(0, getOrderCount());
     }
+
     @Test
     public void shouldUseIncorrectMonthCredit() {
         tourpage.creditWithCard();
@@ -282,6 +295,7 @@ public class PurchaseTourTest {
         tourpage.invalidMonth();
         assertEquals(0, getOrderCount());
     }
+
     @Test
     public void shouldUseExpireYearCredit() {
         tourpage.creditWithCard();
@@ -294,6 +308,7 @@ public class PurchaseTourTest {
         tourpage.cardExpired();
         assertEquals(0, getOrderCount());
     }
+
     @Test
     public void shouldUseFutureYearCredit() {
         tourpage.creditWithCard();
@@ -306,6 +321,7 @@ public class PurchaseTourTest {
         tourpage.cardYear2();
         assertEquals(0, getOrderCount());
     }
+
     @Test
     public void shouldUseIncorrectCvvCredit() {
         tourpage.creditWithCard();
@@ -318,6 +334,7 @@ public class PurchaseTourTest {
         tourpage.incorrectFormat();
         assertEquals(0, getOrderCount());
     }
+
     @Test
     public void shouldUseOnlyNameCredit() {
         tourpage.creditWithCard();
@@ -330,6 +347,7 @@ public class PurchaseTourTest {
         tourpage.surelySigned();
         assertEquals(0, getOrderCount());
     }
+
     @Test
     public void shouldUseOnlyLastNameCredit() {
         tourpage.creditWithCard();
@@ -342,6 +360,7 @@ public class PurchaseTourTest {
         tourpage.incorrectFormat();
         assertEquals(0, getOrderCount());
     }
+
     @Test
     public void shouldUseNameInCyrillicCredit() {
         tourpage.creditWithCard();
@@ -354,6 +373,7 @@ public class PurchaseTourTest {
         tourpage.surelySigned();
         assertEquals(0, getOrderCount());
     }
+
     @Test
     public void shouldUseLastNameInCyrillicCredit() {
         tourpage.creditWithCard();
@@ -366,6 +386,7 @@ public class PurchaseTourTest {
         tourpage.surelySigned();
         assertEquals(0, getOrderCount());
     }
+
     @Test
     public void shouldUseEmptyCardCredit() {
         tourpage.creditWithCard();
@@ -378,6 +399,7 @@ public class PurchaseTourTest {
         tourpage.incorrectFormat();
         assertEquals(0, getOrderCount());
     }
+
     @Test
     public void shouldUseEmptyMonthCredit() {
         tourpage.creditWithCard();
@@ -390,6 +412,7 @@ public class PurchaseTourTest {
         tourpage.incorrectFormat();
         assertEquals(0, getOrderCount());
     }
+
     @Test
     public void shouldUseEmptyYearCredit() {
         tourpage.creditWithCard();
@@ -402,6 +425,7 @@ public class PurchaseTourTest {
         tourpage.incorrectFormat();
         assertEquals(0, getOrderCount());
     }
+
     @Test
     public void shouldUseEmptyOwnerCredit() {
         tourpage.creditWithCard();
@@ -414,6 +438,7 @@ public class PurchaseTourTest {
         tourpage.surelySigned();
         assertEquals(0, getOrderCount());
     }
+
     @Test
     public void shouldUseEmptyCvvCredit() {
         tourpage.creditWithCard();
